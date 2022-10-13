@@ -1,0 +1,6 @@
+POST http://localhost:6969/api/news/plusView
+Content-Type: application/json
+
+{
+   "_id" : "6347c012ae254df799584c95"
+}
