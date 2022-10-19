@@ -59,6 +59,11 @@ const NewsSchema = new Schema({
     type: Number,
     default: 0,
   },
+  status: {
+    type: String,
+    enum: ["soft-delete", "availble"],
+    default: "availble",
+  },
 });
 
 module.exports = mongoose.model("news", NewsSchema);

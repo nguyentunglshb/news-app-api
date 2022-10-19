@@ -2,5 +2,50 @@ POST http://localhost:6969/api/news/plusView
 Content-Type: application/json
 
 {
-   "_id" : "6347c012ae254df799584c95"
+   "_id" : "634f72b19b2ced69fac9a79b"
 }
+
+### 
+GET http://localhost:6969/api/news/search?searchTerm=bc
+Content-Type: application/json
+
+### 
+GET http://localhost:6969/api/news/getNewsbyId?id=634f72b19b2ced69fac9a79b
+
+
+###
+POST http://localhost:6969/api/news/editNews
+Content-Type: application/json
+
+{
+   "_id" : "634f72b19b2ced69fac9a79b",
+   "source": "davebook.com",
+   "content": "content2"
+}
+
+### 
+POST http://localhost:6969/api/news/create
+Content-Type: application/json
+
+{
+   "source": "google.com",
+   "category": "the-thao",
+   "author" : "nguyen thoai",
+   "title": "news test",
+   "description" : "demo-desc",
+   "url": "no image",
+   "urlToImage": "no image too",
+   "content": "content",
+   "view": 99
+}
+
+###
+POST http://localhost:6969/api/news/deleteNews
+Content-Type: application/json
+
+{
+   "_id": "634f72b19b2ced69fac9a79b"
+}
+
+###
+GET http://localhost:6969/api/news/getAllDeleted
